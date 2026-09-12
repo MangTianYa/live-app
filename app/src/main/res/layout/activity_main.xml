@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <cn.chinesetv.app.AspectRatioVideoView
+        android:id="@+id/video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <LinearLayout
+        android:id="@+id/channel_panel"
+        android:layout_width="@dimen/panel_initial_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:padding="@dimen/panel_padding"
+        android:background="@color/panel">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/channels"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/panel_title_text_size"
+            android:textStyle="bold"
+            android:paddingBottom="@dimen/panel_title_spacing" />
+
+        <EditText
+            android:id="@+id/channel_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/control_height"
+            android:layout_marginBottom="@dimen/control_spacing"
+            android:background="@drawable/search_background"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/control_horizontal_padding"
+            android:paddingRight="@dimen/control_horizontal_padding"
+            android:singleLine="true"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:textSize="@dimen/control_text_size" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/empty_channels"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/no_search_results"
+                android:textColor="@color/text_secondary"
+                android:textSize="17sp" />
+
+            <ListView
+                android:id="@+id/channel_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="@dimen/channel_spacing"
+                android:focusable="true"
+                android:listSelector="@android:color/transparent"
+                android:nextFocusRight="@id/video" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/control_height"
+            android:layout_marginTop="@dimen/control_spacing"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/display_mode_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/control_spacing"
+                android:background="@drawable/button_background"
+                android:focusable="true"
+                android:text="@string/display_mode_default"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/control_text_size" />
+
+            <Button
+                android:id="@+id/retry_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:focusable="true"
+                android:text="@string/retry"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/control_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/panel_initial_width"
+        android:background="#D907131B"
+        android:orientation="vertical"
+        android:padding="@dimen/info_padding">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/status_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/info_spacing"
+            android:text="@string/controls_hint"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/hint_text_size" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="panel_initial_width">240dp</dimen>
+    <dimen name="panel_min_width">220dp</dimen>
+    <dimen name="panel_max_width">360dp</dimen>
+    <dimen name="panel_padding">10dp</dimen>
+    <dimen name="panel_title_text_size">20sp</dimen>
+    <dimen name="panel_title_spacing">5dp</dimen>
+    <dimen name="control_height">42dp</dimen>
+    <dimen name="control_spacing">5dp</dimen>
+    <dimen name="control_horizontal_padding">12dp</dimen>
+    <dimen name="control_text_size">16sp</dimen>
+    <dimen name="channel_item_height">44dp</dimen>
+    <dimen name="channel_horizontal_padding">12dp</dimen>
+    <dimen name="channel_spacing">3dp</dimen>
+    <dimen name="channel_text_size">15sp</dimen>
+    <dimen name="info_padding">8dp</dimen>
+    <dimen name="info_spacing">2dp</dimen>
+    <dimen name="status_text_size">17sp</dimen>
+    <dimen name="hint_text_size">11sp</dimen>
+</resources>

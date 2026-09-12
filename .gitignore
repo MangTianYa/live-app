@@ -1,0 +1,6 @@
+*.jks
+*.keystore
+release/release-signing.txt
+local.properties
+.gradle/
+**/build/

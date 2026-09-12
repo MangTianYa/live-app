@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channel_name"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/channel_item_height"
+    android:background="@drawable/channel_item"
+    android:ellipsize="end"
+    android:focusable="false"
+    android:gravity="center_vertical"
+    android:maxLines="1"
+    android:paddingLeft="@dimen/channel_horizontal_padding"
+    android:paddingRight="@dimen/channel_horizontal_padding"
+    android:textColor="@color/text_primary"
+    android:textSize="@dimen/channel_text_size" />
